@@ -1,0 +1,12 @@
+<h3 class="mb-4">Product details</h3>
+
+<div *ngIf="product">
+
+    <h4 class="text-danger mb-3">{{ product.name }}</h4>
+    <img src="{{product.img}}" alt="cover" width="300px">
+    <h5 class="mt-2">{{ product.price | currency }}</h5>
+    <p>{{ product.author }}</p>
+    <p>{{ product.description }}</p>
+    <button class="btn btn-warning" (click)='addToCart(product)'>Buy</button>
+
+</div>

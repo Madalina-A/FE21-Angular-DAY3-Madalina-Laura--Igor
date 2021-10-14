@@ -1,0 +1,22 @@
+<h3 class="mb-4">Products</h3>
+
+<div class="row row-cols-4 g-3">
+
+    <div class="col" *ngFor="let x of products; index as id">
+        <div class="card h-100">
+            <img src="{{x.img}}" class="card-img-top" alt="cover">
+            <div class="card-body">
+                <h5 class="card-title"><a class="text-decoration-none text-success" routerLink="products/{{id}}">{{ x.name }}</a></h5>
+                <p class="card-text">By: {{ x.author }}</p>
+                <p class="card-text fs-5">{{ x.description }}</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- <h4><a class="text-decoration-none text-success" routerLink="products/{{id}}">{{ x.name }}</a></h4>
+    <img src="/src/assets/img/chain.jpg" alt="cover">
+    <p class="fs-5">By: {{ x.author }})</p>
+    <p class="fs-6" *ngIf="x.description ">Description: {{ x.description }}</p> -->

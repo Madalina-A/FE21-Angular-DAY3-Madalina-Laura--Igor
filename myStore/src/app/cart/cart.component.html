@@ -1,0 +1,24 @@
+<h3 class="mb-4">Cart</h3>
+
+<div class="cart-item" *ngFor="let x of items">
+
+    <span class="fs-5">{{ x.name }}, </span>
+    <span class="fs-5">{{ x.price | currency }}</span>
+
+</div>
+
+<form [formGroup]="checkOutForm" (ngSubmit)="onSubmit(checkOutForm.value)">
+
+    <div class="mt-4">
+        <label for="name">Name:</label><br>
+        <input id="name" type="text" formControlName="name">
+    </div>
+
+    <div class="mt-2">
+        <label for="address">Address:</label><br>
+        <input id="address" type="text" formControlName="address"><br><br>
+    </div>
+
+    <button class="btn btn-dark" type="submit">Purchase</button>
+
+</form>
